@@ -34,22 +34,42 @@
   font-display: block;
 }
 
-@font-face {
-  font-family: 'Crimson-text-medium';
-  src: url('/assets/fonts/Crimson_Pro/static/CrimsonPro-Medium.ttf');
-  font-weight: normal;
-  font-style: italic;
-  font-display: block;
+
+.crimson-text-regular {
+font-family: "Crimson Text", serif;
+font-weight: 400;
+font-style: normal;
 }
 
-@font-face {
-  font-family: 'Crimson-text-medium-italic';
-  src: url('/assets/fonts/Crimson_Pro/static/CrimsonPro-MediumItalic.ttf');
-  font-weight: normal;
-  font-style: italic;
-  font-display: block;
+.crimson-text-semibold {
+font-family: "Crimson Text", serif;
+font-weight: 600;
+font-style: normal;
 }
 
+.crimson-text-bold {
+font-family: "Crimson Text", serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.crimson-text-regular-italic {
+font-family: "Crimson Text", serif;
+font-weight: 400;
+font-style: italic;
+}
+
+.crimson-text-semibold-italic {
+font-family: "Crimson Text", serif;
+font-weight: 600;
+font-style: italic;
+}
+
+.crimson-text-bold-italic {
+font-family: "Crimson Text", serif;
+font-weight: 700;
+font-style: italic;
+}
 
 
 /* VARIABLES */
@@ -62,7 +82,7 @@
   --color-text-link: rgba(0,0,255,0.8);
   --color-text-link-hover: rgba(0, 0, 255, 0.089);
   /* Font values */
-  --font-text: 'Crimson-text-medium', serif;
+  --font-text: 'Crimson Text', serif;
   --font-size: 25px;
   --font-small: 15px;
   --font-medium: 1.5rem;
@@ -103,6 +123,7 @@ header {
 p, h2, h3, h4, h5, h6 {
   word-wrap: break-word; /* Ensures long words break properly */
   hyphens: auto; /* Helps with word splitting for better readability */
+  font-weight: 600;
 }
 
 #bg-video-web {
