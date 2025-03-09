@@ -78,7 +78,7 @@ font-style: italic;
   --font-small: 15px;
   --font-medium: 1.5rem;
   --font-large: 2.2rem;
-  --font-family: normal;
+  --font-family: italic;
   /* Margin value */
   --margin: 17rem;
 }
@@ -341,7 +341,7 @@ figcaption p {
 
 .back-to-top {
   position: fixed;
-  bottom: 60px;
+  bottom: 30px;
   right: 30px;
   color: var(--color-text);
   border: solid 1px var(--color-text);
@@ -529,6 +529,9 @@ main{
   figcaption p {
     padding: 0 1rem;
   }
+  .back-to-top {
+    bottom: 60px;
+  }
 }
 
 /* Large mobile screens (max-width: 600px) */
@@ -539,6 +542,9 @@ main{
   }
   figcaption p {
     padding: 0 1rem;
+  }
+  .back-to-top {
+    bottom: 60px;
   }
 }
 
@@ -560,6 +566,9 @@ main{
   figcaption p {
     padding: 0 1rem;
   }
+  .back-to-top {
+    bottom: 60px;
+  }
 }
 
 /* Very small screens (max-width: 340px) */
@@ -573,6 +582,9 @@ main{
   }
   figcaption p {
     padding: 0 1rem;
+  }
+  .back-to-top {
+    bottom: 60px;
   }
 }
 
