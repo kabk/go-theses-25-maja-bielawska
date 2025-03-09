@@ -1,156 +1,686 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-	<head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- Meta tags -->
+  <meta name="description" content="Description of your web page" />
+  <meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..." />
+  <meta name="author" content="Name of the author/owner of the webpage's content" />
 
-		<!-- meta tags, fill them with website meta infos -->
-		<meta name="description" content="Description of your web page" /> 
-		<meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..."/> 
-		<meta name="author" content="Name of the author/owner of the webpage's content" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon/favicon.png" />
 
-		<!-- favicon, fill with a 512x512px .png image named 'favicon.png' -->
-		<link rel="icon" href="assets/images/favicon/favicon.png"/>
+  <!-- Website Title -->
+  <title>Seeing Vaginismus</title>
 
-		<!-- website title, visible in the browser window and on link sharing -->
-		<title>Website title</title>
+  <!-- CSS Dependencies -->
+  <!-- Normalize CSS first -->
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <!-- Littlefoot CSS next -->
+  <link rel="stylesheet" href="https://unpkg.com/littlefoot/dist/littlefoot.css" />
+  <!-- Then your custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?ver=1.0" />
 
-		<!-- links for extensions and dependencies -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+    rel="stylesheet" />
 
-		<!-- css -->
-		<!-- first link your CSS dependences, here is normalize, a CSS 'reset' for cross-browser appearence uniformity -->
-		<link rel="stylesheet" href="assets/css/normalize.css">
-		<!-- you stylesheet -->
-		<link rel="stylesheet" href="assets/css/style.css?ver=1.0">
+</head>
 
-		<!-- js -->
-		<!-- first link your javascript dependencies -->
+<body>
 
-		<!-- then your function scripts -->
-		<script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
-	    
-	</head>
+	<video id="bg-video-web" autoplay muted loop>
+    <source src="assets/images/bgVideo/bg_web_purple.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+	</video>
 
-	<body>
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+    <header>
+      <h5>25 min read</h5>
+      <h1>Seeing vaginismus:<br> Bridging design and medicine for compassionate support</h1>
+      <h1 id="colophon">
+        <em>
+						Graphic Design Thesis by Maja Bielawska<br>
+          	Royal Academy of Arts in The Hague<br>
+          	Written in 2025
+				</em>
+      </h1>
+    </header>
 
-		<!-- webpage content goes here -->
+    <!-- Navigation Container -->
+    <div class="nav-container">
+      <!-- Hamburger Menu (Hidden by Default) -->
+      <button id="hamburger-menu" class="hamburger-menu">Contents</button>
 
-		<div class="page-wrapper">
+      <!-- Navigation Buttons -->
+      <div class="nav-buttons" id="nav-buttons">
+        <button class="nav-button" data-target="intro">Introduction</button>
+        <button class="nav-button" data-target="chapter1">Chapter 1: <br><em> Sex really hurts</em></button>
+        <button class="nav-button" data-target="chapter2">Chapter 2: <br><em> But there’s hope</em></button>
+        <button class="nav-button" data-target="chapter3">Chapter 3: <br><em> It’ll get better</em></button>
+        <button class="nav-button" data-target="outro">Recap</button>
+      </div>
+    </div>
 
-			<header>
+    <!-- Back to Top Button -->
+		<button id="back-to-top" class="back-to-top">↑</button>
 
-				<h1> Hello World!</h1>
-				<p>A <strong>document</strong> by <em>me</em></p>
+    <main>
 
-				<nav>
-					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#chapter-1">Chapter 1</a></li>
-						<li><a href="#chapter-2">Chapter 2</a></li>
-						<li><a href="#chapter-3">Chapter 3</a></li>
-						<li><a href="#epilogue">Epilogue</a></li>
-					</ul>
-				</nav>
-
-			</header>
-
-			<main>
-
-				<h2 id="intro">Intro</h2>
-
+			<div class="abstract">
+      <h2 id="abstract">Abstract</h2>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque metus nulla, rutrum eget malesuada sit amet, gravida in nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ligula felis, consectetur ut mi eu, egestas interdum augue. Aliquam a ipsum lectus. Pellentesque a vulputate ligula, id malesuada quam. Cras eleifend in leo vitae pellentesque. Duis ac vehicula sem, ut blandit leo. Mauris vulputate dapibus velit tincidunt varius. Duis euismod diam tellus, eget dictum ante suscipit quis. Nunc sed est ipsum. Nunc luctus augue id sapien blandit fermentum. Aenean eget ipsum lacinia mi eleifend luctus at a arcu.
+					<em>"I feel different from other women, and I feel inferior..."</em> says a woman with vaginismus—a condition where involuntary pelvic floor spasms lead to painful sex, profoundly affecting her physical, mental, and emotional well being. Due to the lack of awareness, its complexity and invisible nature, people are often misdiagnosed or left undiagnosed. Many feel ashamed; inadequate; different; that no-one understands.<sup class="footnote"><a id="fnref-1" href="#fn-1">1</a></sup>
+				</p>
+				<p>
+					The medical field has made great strides in diagnosing and holistically treating vaginismus, while product designers have created innovative therapeutic tools. Conversations about female sexuality and sexual health begin to break taboos and misconceptions as they enter the mainstream culture.
+				</p>
+				<p>
+					While these efforts have been impactful, many women continue to struggle with the non-physical side of vaginismus including its social, psychological, and relational dimensions. This is where design can play a impactful role, connecting the physical, mental, and social aspects of education and healing.
+				</p>
+				<p>
+					This exploration asks: how can medically and research informed design support people who experience vaginismus? This support can come in the form of empowering women in their individual journeys, equipping health care professionals with tools, and fostering social awareness to further destigmatize this condition.
+				</p>
+				<p>
+					This research draws on conversations with a medical professional, individuals with vaginismus and a designer, alongside a study of academic and popular texts to identify and imagine the potential of a medical-design collaboration. 
+				</p>
+				<p>
+					This thesis provides a historical and medical overview of vaginismus, insights into its current perception, and a study of design’s contributions to therapy, awareness and education so far. It outlines relevant social, political, and cultural context that can inspire informed and compassionate design.
+				</p>
+				<p>
+					Ultimately, the research aims to inspire a holistic and multidisciplinary approach to supporting people with vaginismus, demonstrating the transformative potential of design.
+				</p>
+			</div>
+
+      <h2 id="intro">Introduction</h2>
+				<p>
+					First of all thank you for taking the time and having the courage to read a thesis about a topic you likely know little to nothing about written by me, a bachelor student that often doubts whether she knows anything at all. One thing I do know—and i’m sure you do to—is that people have sex. What I also know—that you may or may not know—is that for many women, sex is painful. But why should you care?
+				</p>
+				<p>
+					Chances are you either have a vagina, at some point you may want to have sex with someone who does, or at the very least came from someone who has one. 
+				</p>
+				<p>
+					We all know about sex, we all know women, and we all know pain, but why haven’t we heard of dyspareunia—when penetration hurts or isn’t possible for whatever reason? Why haven’t we heard of vaginismsus—a mostly psychosomatic condition where involuntary pelvic muscles spams cause painful intercourse?
+				</p>
+				<p>
+					No matter who you are, painful sex is issue that either does or can at some point concern you or your loved ones. And yet there seems to be a discrepancy between the amount of people wrestling with it and our understanding of what it is, why it happens and what on earth you do about it. And since this is a graphic design thesis, why do I (and why should you as a designer) care?
+				</p>
+				<p>
+					Design is is a very powerful discipline that shapes societies behaviors that ideally have a positive ripple effect on the future. I think we sometimes forget about that or become a bit cynical. I invite you to follow me into my gentle negotiation with cynicism, through researching, learning, and speculating.
+				</p>
+				<p>
+					As designers we empathize with whoever’s on the receiving end of our work so we can effectively help, inform, support, lead, confuse, humor, manipulate, anger, or charm them. We try to understand their situation, become aware of their context. But how often do we truly try to do something compassionate? Something that makes a ripple? I hope this thesis gives you the courage to research a topic of interest, speculate, and take small actions with the help of others.
+				</p>
+				<p>
+					Here’s to tiny ripples in a topic that concerns the many women in the world, including me and some of my friends. This is where the tone shifts to slightly more academic; I hope you stick around.
 				</p>
 
+			<h2 id="chapter1">Chapter 1: Sex really hurts<br>
+					<em>Background on vaginismus</em>
+			</h2>
 				<p>
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
+					As the saying goes—knowing is half the battle. Despite 37% of women suffering from pelvic issues, many won’t have even heard of the pelvic floor (muscles that span the bottom of your pelvis) until they face difficulties with it. <sup class="footnote"><a id="fnref-2" href="#fn-2">2</a></sup> Some of these issues include painful or impossible penetration. This chapter provides a brief medical overview of vaginismus and a study of design’s contributions to therapy, awareness and education so far. It explores medical, cultural, and historical contexts for why it remains an ongoing issue. And once we do all that, we will continue with the rest of the battle.
+				</p>
+				<p>
+					Dyspareunia is a term for when vaginal penetration hurts. Penetration being painful or impossible can be caused by a number of conditions which often overlap. We will be focusing on hypertonic pelvic floor dysfunction (PFD), also know as vaginismus, which occurs when the muscles that surround the vagina, bladder, and anus spasm, causing pain upon entry.
+					<sup class="footnote"><a id="fnref-3" href="#fn-3">3</a></sup> <sup class="footnote"><a id="fnref-4" href="#fn-4">4</a></sup>
+					Primary vaginismus is when someone experiences pain from the first attempt of penetration; secondary vaginismus is when it occurs after previously painless insertion.
+				</p>
+				<p>
+					‘It is important to make the distinction between deep dyspareunia and [superficial dyspareunia which is] entry pain. Each have their own list of different root causes, although we also need to recognise that sometimes we may not know the root cause.’ writes Nienke Helder, the designer of Kiwi—an award-winning tool that relieves people from entry pain. Deep pain during penetration can occur due to a invasive procedures like hysterectomies or conditions such as endometriosis, PCOS, fibroids, etc. However, entry pain is psychosomatic 70% of the time. This means that the pain is real, but is caused by mental factors rather than a physical issues. <a id="fnref-5" href="#fn-5">5</a></sup> ‘And if it was not psychoso-matic at the start of the pain experience, the chance is very high that is will become a psychosomatic issue over time.’ explains Nienke. 
+				</p>
+				<p>
+					Vaginismus’ invisible nature leaves many people undiagnosed and unknowingly stuck in a ‘fear-of-pain-cycle’ (Figure 1). 
+					
+					<figure>
+								<img src="content/fig1.jpg" alt="A painted representation of a forest with a big blue lake" width="50%" height="auto">
+							</a>
+									<figcaption>
+										<p>→ Figure 1. The fear-of-pain-cycle.
+										</p>
+									</figcaption>
+					</figure>
+					
+					It is crucial to understand the context of someone’s pain, or what keeps the cycle in place, because as Nienke writes ‘any sexual health problem has a biological, psychological, but also interpersonal and societal aspect to it’. <sup class="footnote"><a id="fnref-6" href="#fn-6">6</a></sup>
+				</p>
+				<p>
+					My curiosity about vaginismus (the commonly psychosomatic entry pain) came about for the following reasons: One being my personal experience with this specific condition which has been tedious and confusing. The second reason is the limited resources I could find to help me. When my pelvic floor therapist told me about a product that other patients found helpful (Figure 2), I rushed to buy it the very same day, excited that it will fix everything. 
+					
+					<figure>
+						<a href="https://www.intimaterose.com/products/vibrating-pelvic-wand" target="_blank">		
+						<img id="img-padding" src="content/fig2.webp" alt="Pelvic wand by Intimate rose" width="50%" height="auto"></a>
+									<figcaption>
+										<p> → Figure 2.
+											<a href="https://www.intimaterose.com/products/vibrating-pelvic-wand" target="_blank"> The Pelvic wand by Intimate Rose. </a> <p>I’d like to note, that with my personal anecdote I’m not trying to undermine the products’ lovely design and success stories. I’m simply illustrating the need for understanding the full network of root causes.</p>
+										</p>
+									</figcaption>
+					</figure>
+					
+					Ultimately, however, it did not resolve the root cause of pain which had mostly to do with the relational aspects of sex, which at the time I thought I could be separate from my body. None of the healthcare professionals I've been to asked about my relationship or level of sexual satisfaction, which is why I remained uninformed.
+				</p>
+				<p>
+					That being said, I strongly believe in design’s ability to affect the quality people's lives and while there are some fantastic therapeutic tools, especially in the field of product design, it made me imagine more ways of supporting people with this condition. But before I start speculating on those, we need to look at the landscape of existing tools.
+				</p>
+				<p>
+					Vaginismus was first (briefly) introduced to me in the show Sex Education—a teen comedy drama that follows the lives of high-schoolers as they navigate dilemmas to do with relationships and sex, in a open, mature, and often humorous way. One of the characters, Lily, has vaginismus (Figure 3) and is recommended dilators for treatment. 
+
+					<figure>
+						<a href="https://www.netflix.com/watch/81084785?source=35&trackId=200257859" target="_blank">
+						<img src="content/fig3.jpg" alt="A painted representation of a forest with a big blue lake" width="100%" height="auto">
+						</a>
+								<figcaption>
+									<p>→ Figure 3.<a href="https://www.netflix.com/watch/81084785?source=35&trackId=200257859" target="_blank"> Still from Sex Education.</a> Lily showing Olga her dilator after saying that her ‘vagina’s like a venus flytrap’.
+									</p>
+								</figcaption>
+					</figure>
+				</p>
+				<p>
+					Dilators can either be static or mechanical (Figure 4) and come in various materials and forms. They are used to desensitize vaginal tissues, relax the muscles, and soften any scar tissue at the vaginal opening caused by child birth. The aforementioned Pelvic Wand is a therapeutic massager used for the same purpose.
+					
+						<figure>
+								<figure-img-wrap>
+									<img id="img-padding" src="content/fig4.1.jpg" alt="A painted representation of a forest with a big blue lake" width="40%" height="auto">
+									<img src="content/fig4.2.webp" alt="A painted representation of a forest with a big blue lake" width="40%" height="auto">
+							</figure-img-wrap>
+										<figcaption>
+											<p>
+												→ Figure 4. Examples of dilators. <br> Images from
+												 <a href="https://www.youtube.com/watch?v=bkKTSw4pL2A" target="_blank"> Gynex Coorporation </a> (left) and <a href="https://www.youtube.com/watch?v=bkKTSw4pL2A" target="_blank">Intimate Rose</a> (right).</em></a> 
+											</p>
+										</figcaption>
+						</figure> 
+
+				</p>
+				<p>
+					A different approach was pioneered by Nienke Helder, who in an email writes that “For both Kiwi and Ohnut it was important to understand the underlying issues of painful sex”. Dezeen’s product of the year Kiwi (Figure 5) uniquely targets the problem with entry pain and prioritises pleasure. “The product has a non-phallic, curved shape with a subtly waved surface to accommodate anatomical variety, and was designed to invite shallow penetration.” <sup class="footnote"><a id="fnref-7" href="#fn-7">7</a></sup> Ohnut (Figure 6), ideated by Emily Sauer—an inventor by necessity—helps couples control the depth of penetration and keeps them in the moment instead of worrying about the pain. Both products can be found on Pelvic People, an online store and an excellent resource for both patients and clinicians. <sup class="footnote"><a id="fnref-8" href="#fn-8">8</a></sup>
+
+					<figure>
+							<a href="https://www.dezeen.com/2024/11/25/kiwi-intends-to-bridge-the-gap-between-sex-toy-and-medical-device/" target="_blank">
+									<img src="content/fig5.webp" alt="Kiwi massager" width="100%" height="auto">
+								</a>
+										<figcaption>
+											<p>→ Figure 5.
+													<a href="https://www.dezeen.com/2024/11/25/kiwi-intends-to-bridge-the-gap-between-sex-toy-and-medical-device/" target="_blank"> Kiwi.</a> 
+											</p>
+										</figcaption>
+						</figure>
+						<figure>
+							<a href="https://thepelvicpeople.com/collections/all-products/products/ohnut-depth-limiting-rings" target="_blank">
+									<img src="content/fig6.webp" alt="Ohnut" width="100%" height="auto">
+								</a>
+										<figcaption>
+											<p>→ Figure 6.
+												<a href="https://thepelvicpeople.com/collections/all-products/products/ohnut-depth-limiting-rings" target="_blank"> Ohnut.</a> 
+											</p>
+										</figcaption>
+						</figure>
+					
+				</p>
+				<p>
+					Finally, there are products that are designed to strengthen the pelvic floor, primarily for preventing prolapse, improving incontinence and postpartum recovery. While, weak muscles may become more tense, overexercizing them can have the same effect. Though specific to vaginismus, these tools can be a part of treatment for properly assessed patients. Products such as Elvie’s (Figure 7) and Perifit (Figure 8) are particularly interesting to me as a graphic designer, because they come with apps that guide you through exercises and visualise your pelvic floor using biofeedback.
+					
+					<div class='figure-wrap'>
+						<figure>
+							<a href="https://www.elvie.com/en-gb/shop/elvie-trainer?srsltid=AfmBOoqjJZ462V-4MI4XOMQWd0Fq37t8jYWxMs7hPts1HOFsdqsU8GYO" target="_blank">
+									<img src="content/fig7.webp" alt="Elvie trainer and app" width="50%" height="auto">
+								</a>
+										<figcaption>
+											<p> → Figure 7.
+												<a href="https://www.elvie.com/en-gb/shop/elvie-trainer?srsltid=AfmBOoqjJZ462V-4MI4XOMQWd0Fq37t8jYWxMs7hPts1HOFsdqsU8GYO" target="_blank"> Elvie trainer and app.</a> 
+											</p>
+										</figcaption>
+						</figure>
+
+						<figure>
+							<a href="https://uk.perifit.co/pages/kegel-exercisers" target="_blank">
+									<img src="content/fig8.jpg" alt="Perfit trainer and app" width="100%" height="auto">
+								</a>
+										<figcaption>
+											<p>→ Figure 8.
+												<a href="https://uk.perifit.co/pages/kegel-exercisers" target="_blank"> Perfit trainer and app.</a><br>
+												<p>It’s interesting to take a look at the approaches designers took for creating an experience of pelvic floor training. While one is more analytical and clean, the other is heavily gamified.</p>
+											
+										</figcaption>
+						</figure>
+					</div>
 				</p>
 
-				<h2 id="chapter-1">Chapter 1</h2>
-
-				<p>
-					Sed volutpat mauris at tempus cursus. Aenean finibus eros nibh, vel consequat velit porta ut. In faucibus ante sed mattis efficitur. Duis semper scelerisque sollicitudin. Vestibulum faucibus, nisl at venenatis posuere, nisi felis congue mauris, eget auctor mi nulla nec tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sapien metus, blandit vehicula purus quis, vehicula cursus erat. Donec non cursus neque.
-				</p>
-
-				<details>
-
-					<summary>
-						<h3 id="intro">Sub-content, example of an accordion</h2>
-					</summary>
-
+				<h3> Aids That Every Woman Appreciates </h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque metus nulla, rutrum eget malesuada sit amet, gravida in nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ligula felis, consectetur ut mi eu, egestas interdum augue. Aliquam a ipsum lectus. Pellentesque a vulputate ligula, id malesuada quam. Cras eleifend in leo vitae pellentesque. Duis ac vehicula sem, ut blandit leo. Mauris vulputate dapibus velit tincidunt varius. Duis euismod diam tellus, eget dictum ante suscipit quis. Nunc sed est ipsum. Nunc luctus augue id sapien blandit fermentum. Aenean eget ipsum lacinia mi eleifend luctus at a arcu.
+						Nowadays women’s sexuality is generally afforded more freedom, acceptance, and even empowerment. However, it’s important to outline the roots and implications of some harmful—potentially lingering—beliefs from the past.
+					</p>
+					<p>
+						In <em>The Job Nobody Wanted</em>, Rachel P. Maines recalls how for centuries women’s desire for sex was one of the very many symptoms of hysteria, a word derived from hystera, Greek for uterus. One of the ways of combatting hysteria in from the late 1800’s—early 1900’s were pelvic massages, done to induce hysterical paroxysm—now known as the female orgasm. These massages were not considered erotic, since it was believed that women derive sexual pleasure only from penetration with a penis (Figure 9). <sup class="footnote"><a id="fnref-9" href="#fn-9">9</a></sup>Their sexual desires were portrayed as something abnormal, difficult to understand, requiring ‘medical’ treatment or even punishment. Criado Perez talks about how these behaviours having a high libido could lead to incarcerations in asylums, hysterectomies and clitoridectomies. “Freud, who got rich and famous off his diagnoses of female hysteria, explained in a 1933 lecture that ‘Throughout history, people have knocked their heads against the riddle of femininity.” she writes.
+
+						<figure>
+							<a href="content/fig9.jpg" target="_blank">
+									<img src="content/fig9.jpg" alt="Sears—Aids That Every Woman Appreciates ad" width="100%" height="auto">
+								</a>
+										<figcaption>
+											<p>→ Figure 9. <a href="content/painting-forest-lake.jpg" target="_blank">"Sears—Aids That Every Woman Appreciates." Sears, Roebuck and Co., 1918. From Wikipedia.</a><br>
+											<p>In the early 20th century the first portable vibrators were invented and were advertised alongside appliances like fans and radiators. Only when they became recognised as a tool for pleasure, they became improper and taboo. They returned as a proudly sexual product during the women’s liberation movement in the 1960s.
+											</p>
+											</p>
+										</figcaption>
+						</figure>
+
+					</p>
+					<p>
+						Nowadays, “having sex” as it's portrayed in pornography and a lot of media often dismisses how female anatomy works as well as non-penetrative pleasure. This can create performance anxiety and propagate the notion that ‘everyone has it easy’. So when it isn’t easy, people attach a sense of shame and guilt to themselves making it harder to expose and address the problems at hand.
+					</p>
+					<p>
+						Discussing your sex issues with friends and family can understandably feel daunting or awkward, but surely your doctor will check if everything’s okay, right? Well, they probably won't.
 					</p>
 
+				<h3>At the doctors office</h3>
 					<p>
-						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
+						Sexual health is rarely discussed in the doctors office. "One international study found just 14 percent of patients said their doctors had asked them about their sexual lives in the past three years”. <sup class="footnote"><a id="fnref-10" href="#fn-10">10</a></sup>This makes referrals to the right doctors and addressing sexual problems difficult, especially if patients feel uncomfortable to bring them up or are uninformed about what could even be happening—which is likely when sexuality education programmes are not encouraged to cover dyspareunia and the overall prevalence of dyspareunia is limited in design and popular culture. <sup class="footnote"><a id="fnref-11" href="#fn-11">11</a></sup><sup class="footnote"><a id="fnref-12" href="#fn-12">12</a></sup><sup class="footnote"><a id="fnref-13" href="#fn-13">13</a></sup>Not including sex life in the conversation creates a sense that it can be separated or is independent from a person’s overall health. 
+					</p>
+					<p>
+						The lack and quality of these conversations can be compounded by social factors.The traditional medical interview model may not work well in getting all the information needed for a diagnosis from women who are generally socialised to take turns when speaking, downplay their status, and come across as friendly. "But sometimes—often—women are providing the information. It’s just that they aren’t being believed.” writes Criado Perez.
+					</p>
+					<p>
+						“Countless […] women have been told that their genitals look perfectly normal and there’s no reason for their pain—that it’s all in their heads”.<sup class="footnote"><a id="fnref-14" href="#fn-14">14</a></sup> During my recent gynecological ultrasound, while sitting on the examination chair waiting for it to begin, I asked my doctor about the challenges he and his patients with vaginismus face. I felt pretty calm, and yet my voice trembled and I felt my muscles resist slightly as he gently inserted the probe—a real life example of a psychosomatic response. With his usual calm demeanour, but no particular emotional involvement, he listened intently to my queries. Dr. Kowalski told me that—most importantly—women’s pain should not be downplayed. He explained that dyspareunia is more often discussed in medical conferences, but that it all depends on which doctor you end up getting. Once the ultrasound was over, I felt particularly chatty, because of how freely he was sharing information if I just asked. But suddenly, just like that, in about 10 minutes, the appointment was over. I walked out of the private clinic with mixed feelings—one one hand I was so happy to hear more than I ever did about vaginismus from a professional; on the other hand, felt like that was possible only because I’ve done prior research that allowed me to ask the right questions and understand his answers—which people can’t possibly be expected to do. The longer I think of it, feeling a bit strange after a gynaecologists visit doesn’t seem so new to me. In addition to the emotional hurdles women can face from these visits, there can also by physical discomfort.
+					</p>
+					<p>
+						Once a person finds their way into a doctors office, often a gynaecologist, they may perform an examination using a speculum (Figure 10) and their fingers to rule out any abnormalities or signs of infection. Research shows that around 30 to 35% of women experience shame, fear or pain linked to these examinations.<sup class="footnote"><a id="fnref-15" href="#fn-15">15</a></sup> Women tend to find the exam uncomfortable, especially when there’s poor emotional contact with the examiner, the patients are younger, have history of sexual abuse, or poor mental health. <sup class="footnote"><a id="fnref-16" href="#fn-16">16</a></sup><sup class="footnote"><a id="fnref-17" href="#fn-17">17</a></sup>For women experiencing dyspareunia, these tests may be stressful and contribute to or even worsen their pain.<sup class="footnote"><a id="fnref-18" href="#fn-18">18</a></sup> Speculums can be uncomfortable, some are metal and cold to the touch, and can make regular routine check-up an unpleasant experience. This led industrial design engineer Ariadna Izcara Gual and researcher Tamara Hoveling to create Lilium—an environmentally friendly speculum that is designed for painless insertion and better usability.<sup class="footnote"><a id="fnref-19" href="#fn-19">19</a></sup>They are now “looking for professionals to collaborate with to further develop this first prototype, and make a difference for women everywhere. To make pelvic exams safer, more pleasant and empowering.”<sup class="footnote"><a id="fnref-20" href="#fn-20">20</a></sup>
+
+						<figure>
+							<a href="https://my.clevelandclinic.org/health/drugs/24238-speculum" target="_blank">
+									<img src="content/fig10.jpg" alt="Diagram showing speculum insertion" width="100%" height="auto">
+								</a>
+										<figcaption>
+											<p> Figure 10. Diagram showing speculum insertion. 
+													Image from <a href="https://my.clevelandclinic.org/health/drugs/24238-speculum" target="_blank">Cleveland Clinic</a>.
+													
+													<p>A speculum is a device used by gynecologists to examine the inside of vagina for abnormalities and to perform pap smears. They are usually plastic (single use) or metal (reusable after sterilization).</p>
+											</p>
+										</figcaption>
+						</figure>
 					</p>
 
-				</details>
+				<h3>Catch 22</h3>
+					<p>
+						The Lilium project is a wonderful example of identifying pain points of multiple stakeholders and developing a well-informed product. While I’m very hopeful that this product will reach every gynaecological office and innovations of this quality will continue to emerge, female-focused inventors may face a unique—but also predictable—set of challenges.
+					</p>
+					<p>
+						In <em>Invisible Women: Exposing Data Bias in a World Designed for Men</em>, Caroline Criado Perez outlines potential obstacles in the research and funding phase. She recalls Boler, who when developing Elvie realized that the data she needed simply did not exist. “We were trying to design a product which fits in the vagina, and so we needed to answer simple questions like, what size, how does it vary by age, by race, after children – all the usual questions. And there just was no data there at all.”
+					</p>
+					<p>
+						The phenomenon where women’s health conditions are overlooked or misdiagnosed, because they don’t experience the same symptoms as men, is called ‘Yentl syndrome’. The term comes from a movie where Barbra Streisand pretends to be a man to receive an education.  Yentl syndrome is particularly popular with conditions than only females experience. This could explain why endometriosis<sup class="footnote"><a id="fnref-21" href="#fn-21">21</a></sup>, a condition that affects 10% of women, remains widely undiagnosed with an average waiting time of 8 years in the UK and 10 years in the US, with no cure available. The first ever guidance on dealing with it was given to UK doctors in 2017, with the main advice being ‘Listen to women.’<sup class="footnote"><a id="fnref-22" href="#fn-22">22</a></sup>
+					</p>
+					<p>
+						When Dr Richard Legro, who led a study on a chemical compound that was shown to relieve period pain with no adverse effects, applied to the NIH (National Institutes of Health) for funding a larger study, he was rejected. Twice. The comments Legro received ‘indicated that the reviewers did not see dysmenorrhea as a priority public health issue’. The implications for such a mindset are clear. Caroline asks him if he thinks he will ever get funding, he says, ‘No. Men don’t care or understand dysmenorrhea. Give me an all-female review panel!’<sup class="footnote"><a id="fnref-23" href="#fn-23">23</a></sup> While dyspareunia’s ripple effect on men’s sex lives can make innovation more urgent, there is a serious need for women’s pain to be heard and taken seriously.
+					</p>
+					<p>
+						Another example <em>Invisible Women</em> features is Janice Alaverez who in 2012 was looking to fund her tech start up Naya Health Inc. During a meeting, investors were not taking her product—a breast pump—seriously and some were too disgusted to even touch it. Cried Perez poses this dilemma:
+					</p>
+					<p><em>
+						"It all feels rather catch-22ish. In a field where women are at a disadvantage specifically because they are women (and therefore can’t hope to fit a stereotypically male ‘pattern’), data will be particularly crucial for female entrepreneurs. And yet it’s the female entrepreneurs who are less likely to have it, because they are more likely to be trying to make products for women. For whom we lack data.”
+					</em></p>
+					<p>
+						We’ve just explored how the historical, medical, and social dimensions of vaginismus and why it remains an issue. Now I invite you to look at methods for how design can create support.
+					</p>
 
+			<h2 id="chapter2">Chapter 2: But there’s hope<br>
+					<em>Handy design framworks</em>
+			</h2>
 				<p>
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
+					When addressing a complex issue like vaginismus, finding suitable frameworks and methodologies can bring clarity, intentionality, and depth to a research and design process. This chapter explores approaches that facilitate care, nuance, and compassion. It outlines alternative design methodologies, theory to designing for emotions, distinguishes the roles of empathy and compassion, and shares advice on multidisciplinary collaboration.
 				</p>
+					<h3>Alternative methodologies</h3>
+						<p>
+							Professor, designer, and researcher Daniela Rosner proposes enhanced design methodologies that include unheard voices and embrace complex narratives unlike their industry’s dominant traditional counterparts. In her book <em>Critical Fabulations: Reworking the Methods and Margins of Design</em> she argues for:<br><br>
 
-				<h2 id="chapter-2">Chapter 2</h2>
+							<em>Alliances</em> rather than <em>individualism</em>: recognizing the full network of contributors and decentering the select few.<br><br>
 
+							<em>Recuperation</em> rather than <em>objectivism</em>: embracing that each designer’s work embodies their experiences, preferences, and agendas.<br><br>
+
+							<em>Interference</em> rather than <em>universalism</em>: accounting for that there is no one-size fits all and being critical to the assumptions made about vast target groups.<br><br>
+
+							<em>Extensions</em> rather than <em>solutionism</em>: defining design opportunities not to a fixed end or solution, but building upon what exists and being present with ever-evolving challenges.
+						</p>
+						<p>
+							These frameworks can relief designers (speaking to myself here) of feeling like they can make that one perfect solution for everybody—if that was possible, the Pelvic Wand would have work for me and vaginismus would be forever solved yay. Instead they can be comfortably present with the complexity and subjectivity. Rosner humanises the design process and makes every stakeholder more involved and encouraged to speculate—and fabulate—on better futures.
+						</p>
+					<h3>Design and emotions</h3>
+						<p>
+							Every day we interact with objects, spaces, and content that influence how we feel, behave, and think. Emotional design is a theory proposed by industrial designer, researcher, and writer  Don Norman. He suggests that objects can elicit different levels of subconscious emotional response: visceral—evoked by the perceptible (or visual) qualities of an object, behavioral—determined by the experience of using it, and the reflective—the rationalization and intellectualization of the product.<sup class="footnote"><a id="fnref-24" href="#fn-24">24</a></sup>
+						</p>
+						<p>
+							Norman explains, “Intense fear paralyses you; it actually affects how your brain works…”.<sup class="footnote"><a id="fnref-25" href="#fn-25">25</a></sup> He describes how incorporating positive valence—elements that evoke a positive, pleasant, and uplifting response—triggers dopamine secretion into the prefrontal cortex, facilitating breadth-first problem-solving, which is driven by curiosity. During sex this could translate to exploring various positions, applying more lube, or slowing down to see what works. Redirecting fear into curiosity could be essential to reframing women’s emotional response to penetrative sex.
+						</p>
+						<p>
+							This means designers can choose to evoke specific emotions at different points of contact with a design. If they are intentional about the emotional response to objects or services created for women with vaginismus, they could support them more effectively. For example, designing for feelings of calm, safety, arousal, pleasure, reassurance and joy could be beneficial.
+						</p>
+						<p>
+							The feeling of joy and what inspires it is studied by designer and author Ingrid Fetell Lee. She identified 10 aesthetics of joy: energy, abundance, freedom, harmony, play, surprise, transcendence, magic, celebration, and renewal.<sup class="footnote"><a id="fnref-26" href="#fn-26">26</a></sup> Lee’s research shows that creating joyful spaces can influence the well-being of people and societies. Her methodologies and findings can help designers discover ways to elicit the appropriate visceral response for women trying to learn or heal.
+						</p>
+					<h3>Empathy vs. Compassion</h3>
+						<p>
+							For Nienke Helder, it is key to understand that issue fully. Her methodology “consists of conducting many stakeholder interviews, and extensive problem decomposition, such as making a user experience cycle, writing needs statements, and user feedback as you go through concept development.” 
+						</p>
+						<p>
+							She believes that if done properly ”designers can become a helicopter, who understands this complex context of why a problem exists, and why it has not been solved yet, by mapping the experiences of each stakeholder, varying from patient to health care insurer, to partner, to clinician, to societal standards.” Even though empathetically mapping these experiences and linking them together is essential, it is not enough.
+						</p>
+						<p class="'block-quote">
+							”While empathy is a popular word in the design field, [she thinks] sticking to creating awareness is limiting the field's abilities. Empathy is characterized by an awareness of other people's emotional experiences and an attempt to feel those same emotions from their perspective. Compassion is characterized by the desire to take action to help the other person.”
+						</p>
+						<p>
+							Many issues compassionate designers want to contribute to require  the experience or expertise of someone outside of their field. For initiating multidisciplinary collaboration Nienke gives the following advice:
+						</p>
+						<p class="block-quote">
+							“The medical field is a stakeholder, just like the patient. If you approach a clinician with a question for help, make sure you know what you are asking them. Clarify what project stage you are in, and how you are going to use the time you are asking from them. Accept your own knowledge limitations on the topic, but utilize the skills you do have. An example of a reasonable question is: What limitations do you see in current treatment options for patients with dyspareunia? This question is clear and not leading. Avoid a question like: I want to do a project about dyspareunia, can you help me think of things to solve? I would also advise to include your motivation as to why you are working on this particular topic.”
+						</p>
+						<p>
+							Ultimately, while empathy helps us understand the issue, we have to go beyond awareness and into action and collaboration. The role of a compassionate designer is to contribute to ways of supporting or even solving problems. To do this effectively, designers can bridge their gaps in knowledge and expertise by collaborating in a professional and open-minded way. 
+						</p>
+
+			<h2 id="chapter3">Chapter 3: It’ll get better<br>
+					 <em>Speculating on design opportunities</em>
+			</h2>
+				<h3>1. Encouraging mindfulness and mind-body connection</h3>
 				<p>
-					Proin non pellentesque leo. Integer finibus luctus mi eu egestas. Integer placerat non tortor id lacinia. Donec faucibus fermentum porta. Praesent fringilla sapien id tempor vestibulum. Morbi egestas dolor vitae lacus mattis, id posuere nulla viverra. Ut ultricies placerat mi, et porttitor nunc sodales sit amet. Cras vehicula lectus eget tortor efficitur, sit amet imperdiet velit varius. Pellentesque ultricies purus pretium magna efficitur, eget interdum orci dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum finibus, lorem at blandit luctus, massa libero feugiat ex, non fringilla ante sem quis lorem. Cras ac consequat dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque suscipit turpis leo, at dapibus justo rutrum sed. In nunc nunc, sagittis eget rutrum consectetur, tempus vitae augue.
+					Many people are completely unaware of what a pelvic floor even is, let alone that it might be tense. During my first session I was asked to imagine a flower opening and then softly closing in my vagina as a way of connecting to and relaxing my pelvic floor. Another time, when building strength (weak muscles can become tense as well), I was to imagine an elevator going up, stopping, and then descending. In an animated short film <em>Tightly Wound </em> (Figure 11) about Shelby Hayden’s journey with the condition, her therapist tells her “Deep breath in. Let your belly rise and expand like a balloon. Drop your pelvic floor. Imagine a lime passing through your vagina”.<sup class="footnote"><a id="fnref-27" href="#fn-27">27</a></sup> Being able to access muscles someone never consciously activated before is challenging and requires practice. Therapists use visualisations to help patients create a mind-body connection. Aphantasia is the inability to form mental images, which could possibly make it harder for some women to engage in this method. <sup class="footnote"><a id="fnref-28" href="#fn-28">28</a></sup><sup class="footnote"><a id="fnref-29" href="#fn-29">29</a></sup>
+
+					<figure>
+						<a href="https://www.youtube.com/watch?v=7laSF4QM6SY" target="_blank">
+								<img src="content/fig11.png" alt="Imagine a lime passing through your vagina" width="100%" height="auto">
+							</a>
+									<figcaption>
+										<p>→ Figure 11. “Imagine a lime passing through your vagina”. Still from <a href="https://www.youtube.com/watch?v=7laSF4QM6SY" target="_blank">short film Tightly Wound</a>.
+										</p>
+									</figcaption>
+					</figure>
 				</p>
-
-				<figure>
-
-					<a href="content/painting-forest-lake.jpg" target="_blank">
-				    	<img src="content/painting-forest-lake.jpg" alt="A painted representation of a forest with a big blue lake" width="100%" height="auto">
-				    </a>
-
-				    <figcaption>
-
-				    	<p>
-				    		<em><a href="https://www.youtube.com/watch?v=bkKTSw4pL2A" target="_blank">Painting of a forest with a blue lake</a>, by Anonymous</em>
-				    	</p>
-
-				    </figcaption>
-
-				</figure>
-
 				<p>
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
+					Mindfulness is often practiced through yoga and meditation. A notable app for meditation called <em>Headspace</em> stands out with its friendly, calm, and airy visual language and user experience (Figure 12). <sup class="footnote"><a id="fnref-30" href="#fn-30">30</a></sup> What people see affects how they feel before embarking on the often daunting task of closing one’s eyes and meditating for the first time. <em>Headspace</em> makes the entry point and aftercare feel safe and encouraging. 
+
+					<figure>
+						<a href="https://www.headspace.com/" target="_blank">
+								<img src="content/fig12.svg" alt="Headspace illustrations" width="100%" height="auto">
+							</a>
+									<figcaption>
+										<p>→ Figure 12. Illustrations from
+												<a href="https://www.headspace.com/" target="_blank"> Headspace</a>.
+										</p>
+									</figcaption>
+					</figure>
 				</p>
-
-				<h2 id="epilogue">Epilogue</h2>
-
 				<p>
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
+					<em>How we Feel</em> (Figure 13) is another tool that encourages mindfulness.<sup class="footnote"><a id="fnref-31" href="#fn-31">31</a></sup> It’s a feelings journal app that allows people to stop for a moment during their day and notice how they feel. They are able to choose an emotion that are represented by many different shapes—the calmer the feeling the rounder and subtler, the more energetic or aroused the more detailed and spikier. This non-profit project was created by scientists, designers, engineers, and psychologists and helps people develop the skill of noticing and understanding one's current psychological and physical state. 
+
+					<figure>
+						<a href="https://howwefeel.org/" target="_blank">
+								<img src="content/fig13.jpg" alt="How We Feel app" width="100%" height="auto">
+						</a>
+									<figcaption>
+										<p>→ Figure 13. Screenshot from the
+												<a href="https://howwefeel.org/" target="_blank"> How We Feel app</a>.
+										</p>
+									</figcaption>
+					</figure>
 				</p>
-
-			</main>
-
-
-
-			<footer>
-
-				<hr>
-
 				<p>
-					Last edit date: 2023/12/11
+					These tools show how design can be used to encourage a practice of physical and mental awareness. Becoming aware of one’s posture, body language, and tension can be an important step in gaining more control over the pelvic floor. This opens up a design opportunity to create tools specifically for pelvic floor hypertension.
 				</p>
+			
+				<h3>2. Creating habits and routine</h3>
+					<p>
+						Moreover, the examples provided help their users create a habit by choosing a plan that’s most appropriate for them. For some, pelvic therapy can be accompanied by anxiety, uncertainty, and frustration. Having a clear trajectory with an individualised plan, building healthy habits, and maintaining consistency is crucial for healing. Developing encouraging tools for habit tracking and staying motivated in a non-linear process of improving one’s condition is another design opportunity.
+					</p>
+					<p>
+						Not to mention, small healthy habits like stretching, massaging surrounding muscles, heat therapy, or sitting with uncrossed legs are all terribly easy not to do. Perhaps joyful reminders either in the digital or physical surroundings could help make them part of a persons routine. For example, a gentle push notification, chime, vase, jewellery, ornament, notebook.
+					</p>
+				<h3>3. Toolkits for couples—for healing and relationship maintenance </h3>
+					<p>
+						"The thing is, no matter how much we try to minimize its importance or focus on other aspects of a relationship, [for most people] sex is a crucial part of a healthy partnership’.<sup class="footnote"><a id="fnref-32" href="#fn-32">32</a></sup>
+					</p>
+					<p>
+						One of the most successful studies on making intercourse possible with lifelong vaginismus used the fear-avoidance model (Figure 14) and developed a treatment based on the exposure model.
+						<sup class="footnote"><a id="fnref-33" href="#fn-33">33</a></sup>Which essentially means confronting a phobia as a way to manage it. Their methodology was couple-focused and was about consistently practicing insertion of small objects (like fingers or dilators) to break the fear-of-pain cycle. The researchers “recommend that couples take 1 week off from work so that they can have long exposure sessions and practice intensively by themselves (approximately 2 or 3 times per day)”.<sup class="footnote"><a id="fnref-34" href="#fn-34">34</a></sup> There are opportunities here for creating toolkits and guides for informing both parties of the condition and corrugating open communication for creating a safe and enthusiastic space for practice. 
 
-			</footer>
+						<figure>
+							<a href="content/painting-forest-lake.jpg" target="_blank">
+									<img src="content/fig14.png" alt="The fear-avoidance model" width="100%" height="auto">
+								</a>
+										<figcaption>
+											<p> → Figure 14. The fear-avoidance model. Image from
+												<a href="https://www.youtube.com/watch?v=bkKTSw4pL2A" target="_blank"> Total Physio Sydney</a>.
+											</p>
+										</figcaption>
+						</figure>
+					</p>
+					<p>
+						However, while the aforementioned treatment had a high success rate in helping with penetration, it did not show positive changes to the woman’s sexual experience with her partner. This is very important—just because penetration is painless, does not automatically make it enjoyable. For people that have been bearing through painful sex or haven’t had sex at all, creating desire and arousal is key. 
+					</p>
+					<p>
+						For many people, context is very important for these feelings to arise. “You need more sexually relevant stimuli activating the accelerator and fewer things hitting the brake,” writes Emily Nagoski in Come As You Are. Depending on the person, things like a messy room, expectations, and being physically uncomfortable can be major brakes that stifle their capacity to be present. When you add the fear-of-pain cycle into the mix, it feels extra important for there not to be other things to worry about. An awareness of spontaneous and responsive desire, the couple’s individual breaks and accelerators, and a better understanding of each other’s anatomy are all good steps. <sup class="footnote"><a id="fnref-35" href="#fn-35">35</a></sup> The School of Life has a wonderful collection of resources for connecting with a partner, like Pillow Talk—cards to prompt couples to share their intimate desires. Products like this can serve as an inspiration for tools that are more specific to painful sex (Figure 15).<sup class="footnote"><a id="fnref-36" href="#fn-36">36</a></sup> Research into the kinds of issues couples face during practice sessions or sex could inform how and what needs are waiting to be met.
+
+						<figure>
+							<a href="https://shop.theschooloflife.com/products/pillow-talk?srsltid=AfmBOorpXs1EjqHb6pcZ3SbaZhkRvnY3i5ZERrf1aGt1wyWA20lngNqr" target="_blank">
+									<img src="content/fig15.jpg" alt="Pillow Talk cards" width="100%" height="auto">
+								</a>
+										<figcaption>
+											<p>→ Figure 15.
+												<em><a href="https://shop.theschooloflife.com/products/pillow-talk?srsltid=AfmBOorpXs1EjqHb6pcZ3SbaZhkRvnY3i5ZERrf1aGt1wyWA20lngNqr" target="_blank">Pillow Talk cards by School of Life</em></a>.
+											</p>
+										</figcaption>
+						</figure>
+					</p>
+				<h3>4. Guided self-therapy</h3>
+					<p>
+						Oftentimes, people with vaginismus don’t have a long-term partner, have little access to one, or simply cannot allow themselves the recommended week off work. In these cases, therapy usually happens within a doctor’s office or at home alone, where they can be left awkwardly staring at the wall while doing breathing and relaxation exercises. Practicing for what is ultimately supposed to lead to sex—at best an immersive experience where we connect with another—can feel very clinical and lonely. All of this can be unmotivating and uninspiring, making it difficult to build a habit and positive connotations with penetration. Some people, however, accompany their practice with soothing music or guided pelvic relaxation videos. In fact, there are even Spotify playlists and Reddit threads with recommendations specifically for this.
+					</p>
+					<p>
+						Practicing penetration within a non-sexual context can be tricky. For some, it does not necessarily target their fear, activating it when the possibility of intercourse arises. This is why some pelvic floor therapists recommend accompanying the exercises with masturbation. However, not everyone may be comfortable or ready to combine the two.
+					</p>
+					<p>
+						An opportunity to help those who feel they prefer to be guided (like through a <em>Headspace</em> meditation session) is the development of more effective and specific audio resources. I also speculate that there is potential for creating visuals that mirror exercises (breathing, Kegel, insertion, etc.) in a way that creates a positive emotional response and fosters optimistic connotations with penetration. I imagine these taking the form of soft, uplifting animations.
+					</p>
+				<h3>5. Gathering symptoms </h3>
+					<p>
+						Pain is difficult to describe. <em>When Sex Hurts</em> provides some words to help people begin recognizing and identifying their pain. People experiencing painful sex may feel one or more of the following: searing, burning, stabbing, cramping, itching, sharp, cutting, dull, aching, throbbing, gnawing, jabbing, hot, cold, pressure, bloating, numbing, shooting, soreness, constant, radiating, and tightness. Is there a case for visualizing these intangible sensations, similar to the <em>How We Feel</em> app?
+					</p>
+				<h3>6. Education and awareness</h3>
+					<p>
+						From my conversations with people experiencing pelvic troubles and from personal experience, I gathered that not knowing is one of the hardest parts. I heard someone wish they had been taught what kinds of pelvic issues exist and which medical specialists women should know about as part of school sex education programs. I heard someone express disbelief when they were first told that it had anything to do with their muscles. Similarly, I was convinced that the burning pain was just an infection.
+					</p>
+					<p>
+						“By the time women like you find [informed doctors], they are exhausted, hopeless, and furious: furious at doctors who refuse to take them seriously; at husbands, boyfriends, and partners who refuse to accept the reality of their pain; and at themselves for what they perceive as a weakness within.”<sup class="footnote"><a id="fnref-37" href="#fn-37">37</a></sup>
+					</p>
+					<p>
+						Educating women at a young age about their anatomy, the issues they may face, and the avenues through which they can seek help could make them more confident in advocating for themselves in a doctor’s office and give them hope in finding the right treatment. With all the talk about ‘popping the cherry’ and ‘it hurts the first time you do it,’ where is the important message that ‘sex shouldn’t hurt’—along with information that doesn’t make people feel like they are broken if it does?
+					</p>
+				<h3>8. Sharing experiences and abolishing hopelessness</h3>
+					<p>
+						While Reddit provides a space for people to share and read countless experiences and questions about vaginismus, there is no dedicated space for these conversations to take place and for resources to be shared. Given that “it depends which doctor you end up with,” women often go through a lot of trial and error. A platform for sharing and finding helpful professionals could be beneficial. By accessing resources and giving back to the community, women could find a sense of togetherness. Stepping outside the digital world and having these conversations out loud in a safe space could help alleviate feelings of shame or loneliness.
+					</p>
+
+				<h2 id="outro">Concluding note</h2>
+					<p>
+						To recap, vaginismus is a frustrating psychosomatic condition affecting the lives of many women. While steps are being made both socially and in design to address women’s pain, it remains an ongoing problem because of several complex factors.
+					</p>
+					<p>
+						The historical context of women’s sexuality shows us how their desires have been misunderstood and sometimes demonized, producing unhelpful beliefs and taboos. A look into the doctor’s office reveals hurdles both women and doctors face when trying to examine and diagnose a patient. We also see how gender data gaps and social factors make creating female-based innovations a challenge—especially when the innovators are women. 
+					</p>
+					<p>
+						But we learn that, as designers, we can embrace all this complexity and fabulate better futures together. We’ve got theories about designing for healing emotions—such as joy—under our belt. Nienke Helder has shared her wisdom on properly using research, design, and collaboration to make a change. And finally, for anyone who feels so inclined, I’ve speculated on a few design opportunities to give those who dare a jumpstart ☺.
+					</p>
+					<p>
+						I strongly believe in designing with purpose and compassion. My hope for this thesis is that those who share these values feel activated to explore a topic of interest, speculate on what role they can play in it, and explore possible methodologies and lenses through which to look at the problem.
+					</p>
+					<p>
+						To ripples!
+					</p>
+	
 
 
+      
 
-		</div>
+      <footer>
+        <ol class="footnotes-list">
+          <li id="fn-1" value="1">
+						Elaine Ward and Jane Ogden,<em> "Experiencing Vaginismus—Sufferers’ Beliefs about Causes and Effects,"</em> Sexual and Marital Therapy 9, no. 1 (1994): 33.<span class="footnotereverse"><a href="#fnref-1">↩</a></span>
+          </li>
+					<li id="fn-2" value="2">
+						Caroline Criado Perez, Invisible Women: Exposing Data Bias in a World Designed for Men (Great Britain: Chatto & Windus, 2019), p. 173.
+						<span class="footnotereverse"><a href="#fnref-2">↩</a></span>
+          </li>
+					<li id="fn-3" value="3">
+						Pronounced vaj-uh-NIZ-muhs.<span class="footnotereverse"><a href="#fnref-3">↩</a></span>
+          </li>
+					<li id="fn-4" value="4">
+						Andrew Goldstein, Caroline Pukall, and Irwin Goldstein, When Sex Hurts: A Woman’s Guide to Banishing Sexual Pain (New York: Balance, 2011), p. 14.<span class="footnotereverse"><a href="#fnref-4">↩</a></span>
+          </li>
+					<li id="fn-5" value="5"> A statistic shared with me by my gynaecologist.<span class="footnotereverse"><a href="#fnref-5">↩</a></span>
+					</li>
+					<li id="fn-6" value="6">
+						The biopsychosocial model explains how biological (hormones, genetics, body sensations), psychological (emotions, beliefs, mental health), and social (relationships, culture, socioeconomic status) factors interact to shape health. The Pain Perception Project. The Pain Perception Project. 2019. https://www.painperceptionproject.com/.
+						<span class="footnotereverse"><a href="#fnref-6">↩</a></span>
+					</li>
+					<li id="fn-7" value="7"> Ruby Betts, "Kiwi Intends to Bridge the Gap Between Sex Toy and Medical Device," Dezeen, November 25, 2024, https://www.dezeen.com/2024/11/25/kiwi-intends-to-bridge-the-gap-between-sex-toy-and-medical-device/.
+						<span class="footnotereverse"> <a href="#fnref-7">↩</a></span>
+					</li>
+					<li id="fn-8" value="8">
+						The Pelvic People. The Pelvic People. Accessed January 31, 2025. https://www.thepelvicpeople.com. 
+						<span class="footnotereverse"><a href="#fnref-8">↩</a></span>
+					</li>
+					<li id="fn-9" value="9">
+						Maines, Rachel P. “The Job Nobody Wanted.” In The Technology of Orgasm: "Hysteria," the Vibrator, and Women's Sexual Satisfaction. Baltimore: Johns Hopkins University Press, 1999.
+						<span class="footnotereverse"><a href="#fnref-9">↩</a></span>
+					</li>
+					<li id="fn-10" value="10">
+						Goldstein, Pukall, and Goldstein, When Sex Hurts, p. 38.
+						<span class="footnotereverse"><a href="#fnref-10">↩</a></span>
+					</li>
+					<li id="fn-11" value="11">
+						World Health Organization (WHO). The Journey Towards Comprehensive Sexuality Education: Global Status Report. November 2021. WHO Team: Sexual and Reproductive Health and Research (SRH). Edited by UNESCO, UNAIDS, UNFPA, WHO, and UN Women.
+						<span class="footnotereverse"><a href="#fnref-11">↩</a></span>
+					</li>
+					<li id="fn-12" value="12">
+						World Health Organization (WHO). International Technical Guidance on Sexuality Education. March 14, 2018. WHO Team: Sexual and Reproductive Health and Research (SRH). Edited by UNESCO, UNAIDS, UNFPA, UNICEF, UN Women, and WHO
+						<span class="footnotereverse"><a href="#fnref-12">↩</a></span>
+					</li>
+					<li id="fn-13" value="13">
+						With some exceptions like HANX—a sexual health brand—campaigning awareness of painful sex in 2023, the shows Sex Education and Unorthodox, and clips of singer Meghan Trainor talking about her journey, the examples are scarce. Terms like ‘vaginismus’, ‘painful sex’, and ‘dyspareunia’ don’t yield any results (other than Kiwi) on popular design community platforms.
+						<span class="footnotereverse"><a href="#fnref-13">↩</a></span>
+					</li>
+					<li id="fn-14" value="14">
+						Criado Perez, Invisible Women, p. 223.
+						<span class="footnotereverse"><a href="#fnref-14">↩</a></span>
+					</li>
+					<li id="fn-15" value="15">
+						O’Laughlin, D.J., B. Strelow, N. Fellows, et al. "Addressing Anxiety and Fear During the Female Pelvic Examination." Journal of Primary Care & Community Health 12 (2021). https://doi.org/10.1177/2150132721992195.
+						<span class="footnotereverse"><a href="#fnref-15">↩</a></span>
+					</li>
+					<li id="fn-16" value="16">
+						Hilden, Malene, Niels T. Sidenius, Bente Langhoff-Roos, Anne Birgitte Wijma, and Barbro Wijma. “Women’s Experiences of the Gynecologic Examination: Factors Associated with Discomfort.” Acta Obstetricia et Gynecologica Scandinavica 82, no. 11 (2003): 1030–36. https://doi.org/10.1034/j.1600-0412.2003.00253.x.
+						<span class="footnotereverse"><a href="#fnref-16">↩</a></span>
+					</li>
+					<li id="fn-17" value="17">
+						Yanikkerem, E., M. Ozdemir, H. Bingol, A. Tatar, and G. Karadeniz. "Women’s Attitudes and Expectations Regarding Gynecological Examination." Midwifery 25, no. 5 (October 2009): 500–508. https://doi.org/10.1016/j.midw.2007.08.006.
+						<span class="footnotereverse"><a href="#fnref-17">↩</a></span>
+				</li>
+				<li id="fn-18" value="18">
+					In my case, I thought the burning pain during was coming from an infection, so I went to a dutch GP for an exam and a referral. She used a cold, un-lubricated metal speculum. After the results came back negative, and I was told nothing, but to use more lubricant by the first gynaecologist, I visited another doctor privately in Poland. By the end of the examination, she was telling me how there’s no sign of infections, but that my muscles feel very tight, demonstrating it by moving her finger forcefully in different directions. At least at the end I got a referral to a pelvic floor therapist and a sex therapist.<br><br>
+
+					Later, a rheumatological asked me to get an STI test to rule it out from his diagnosis. This time, I warned the nurse of my tightness and pain. After being unable to insert the speculum the first time she told me, frustrated, that I “will have to co-operate”. Feeling violated and in pain, I could not help but cry when I left the building. Even though it’s been years, recalling this still makes me feel faint. This is not to say, that all gynaecological examinations are painful for everyone. Before my condition they’d be a bit uncomfortable at their worst and managed to find a gentle and patient doctor.
+						<span class="footnotereverse"><a href="#fnref-18">↩</a></span>
+				</li>
+				<li id="fn-19" value="19">
+					Izcara Gual, Ariadna, and Tamara Hoveling. "New Vaginal Speculum Design Might Motivate Women to Go for Health Checkups." TU Delft, January 15, 2025. https://www.tudelft.nl/en/ide/delft-design-stories/new-vaginal-speculum-design-might-motivate-women-to-go-for-health-checkups.
+					<span class="footnotereverse"><a href="#fnref-19">↩</a></span>
+				</li>
+				<li id="fn-20" value="20">
+					In case you are interested contact  T.Hoveling@tudelft.nl
+					<span class="footnotereverse"><a href="#fnref-20">↩</a></span>
+				</li>
+				<li id="fn-21" value="21">
+					Endometriosis, a condition in which uterine tissue grows outside the uterus, is one of the most complex and frustrating, yet common, conditions in gynecology. Women with endometriosis often experience severe pain, sometimes only at certain times during their menstrual cycle, sometimes always. In addition to chronic pelvic pain, these women may also suffer from deep dyspareunia. Goldstein, Pukall, and Goldstein, When Sex Hurts, p. 15.
+					<span class="footnotereverse"><a href="#fnref-21">↩</a></span>
+				</li>
+				<li id="fn-22" value="22">
+					Criado Perez, Invisible Women, p. 224.
+					<span class="footnotereverse"><a href="#fnref-22">↩</a></span>
+				</li>
+				<li id="fn-23" value="23">
+					Criado Perez, Invisible Women, p. 175.
+					<span class="footnotereverse"><a href="#fnref-23">↩</a></span>
+				</li>
+				<li id="fn-24" value="24">
+					Norman, Don. Emotional Design: Why We Love (or Hate) Everyday Things. New York: Basic Books, 2005, p. 27.
+					<span class="footnotereverse"><a href="#fnref-24">↩</a></span>
+				</li>
+				<li id="fn-25" value="25">
+					Norman, Don. The Three Ways That Good Design Makes You Happy. Filmed 2003. TED video, 12:41. Posted June 2009. https://www.youtube.com/watch?v=RlQEoJaLQRA.
+					<span class="footnotereverse"><a href="#fnref-25">↩</a></span>
+				</li>
+				<li id="fn-26" value="26">
+					Ingrid Fetell Lee, Joyful: The Surprising Power of Ordinary Things to Create Extraordinary Happiness (London: Rider, 2021).
+					<span class="footnotereverse"><a href="#fnref-26">↩</a></span>
+				</li>
+				<li id="fn-27" value="27">
+					Hadden, Shelby, director. What It's Like to Not Be Able to Have Sex | Iris. Produced by Sebastian Bisbal. YouTube video, 4:18. September 4, 2018. https://www.youtube.com/watch?v=7laSF4QM6SY&t=464s.
+					<span class="footnotereverse"><a href="#fnref-27">↩</a></span>
+				</li>
+				<li id="fn-28" value="28">
+					Cleveland Clinic. "Aphantasia: What It Is, Causes, Symptoms & Treatment." Cleveland Clinic, August 31, 2023. https://my.clevelandclinic.org/health/symptoms/25222-aphantasia.
+					<span class="footnotereverse"><a href="#fnref-28">↩</a></span>
+				</li>
+				<li id="fn-29" value="29">
+					Smith, Ó. An Investigation into the Impact of Visual Imagery Ability on the Development and Experience of Mindfulness. Doctoral thesis, University of Wolverhampton, 2023. http://hdl.handle.net/2436/625594.
+					<span class="footnotereverse"><a href="#fnref-29">↩</a></span>
+				</li>
+				<li id="fn-30" value="30">
+					Headspace. Headspace: Meditation & Sleep. Version 4.93.0. Headspace, Inc., 2025. iOS app.
+					<span class="footnotereverse"><a href="#fnref-30">↩</a></span>
+				</li>
+				<li id="fn-31" value="31">
+					How We Feel Project, Inc. How We Feel. Version 1.14.1. How We Feel Project, Inc., 2022. iOS/Android app.
+					<span class="footnotereverse"><a href="#fnref-31">↩</a></span>
+				</li>
+				<li id="fn-32" value="32">
+					Goldstein, Pukall, and Goldstein, When Sex Hurts, p. 52.
+					<span class="footnotereverse"><a href="#fnref-32">↩</a></span>
+				</li>
+				<li id="fn-33" value="33">
+					ter Kuile, Moniek M., et al. "Therapist-Aided Exposure for Women with Lifelong Vaginismus: A Replicated Single-Case Design." Journal of Consulting and Clinical Psychology 77, no. 1 (2009): 149–159.
+					<span class="footnotereverse"><a href="#fnref-33">↩</a></span>
+				</li>
+				<li id="fn-34" value="34">
+					Perez, Samara, and Yitzchak M. Binik. "Vaginismus: 'Gone' But Not Forgotten." Psychiatric Times 33, no. 7 (July 29, 2016). https://www.psychiatrictimes.com/view/vaginismus-gone-not-forgotten (accessed January 21, 2025).
+					<span class="footnotereverse"><a href="#fnref-34">↩</a></span>
+				</li>
+				<li id="fn-35" value="35">
+					Nagoski, Emily. Come as You Are: The Surprising New Science That Will Transform Your Sex Life. Simon and Schuster Paperbacks, 2021.
+					<span class="footnotereverse"><a href="#fnref-35">↩</a></span>
+				</li>
+				<li id="fn-36" value="36">
+					The School of Life. 2025. The School of Life. Accessed January 21, 2025. https://www.theschooloflife.com.
+					<span class="footnotereverse"><a href="#fnref-36">↩</a></span>
+				</li>
+				<li id="fn-37" value="37">
+					Goldstein, Pukall, and Goldstein, When Sex Hurts, p. 173.
+					<span class="footnotereverse"><a href="#fnref-37">↩</a></span>
+				</li>
+				
+        </ol>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/littlefoot/dist/littlefoot.js"></script>
+<script src="assets/js/script.js?ver=1.0"></script>
 
 
-
-		<!-- end webpage content -->
-
-
-
-	</body>
+</body>
 
 </html>
