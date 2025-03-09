@@ -39,41 +39,45 @@ font-style: italic;
 
 
 /* VARIABLES */
+
 :root {
-  /* Colors */
+  /* Color values */
   --color-background: rgba(255,255,255,1);
-  --color-text: rgb(85, 76, 246);
+  --color-text: rgb(90, 75, 255);
   --secondary-color: #ecfd36;
   --color-text-link: rgba(0,0,255,0.8);
   --color-text-link-hover: rgba(0, 0, 255, 0.089);
-
-  /* Fonts */
+  /* Font values */
   --font-text: 'Crimson Text', serif;
   --font-size: 25px;
   --font-small: 15px;
   --font-medium: 1.5rem;
   --font-large: 2.2rem;
-
-  /* Margin */
+  --font-family: 'Crimson Text', serif;
+  /* Margin value */
   --margin: 17rem;
 }
 
+
+
 /* GENERAL STYLES */
+
 html {
-  font: var(--font-size) var(--font-text);
+  font: var(--font-size) var(--font-family);
   color: var(--color-text);
   background-color: var(--color-background);
 }
 
 body {
-  position: relative;
+  position:relative;
   font-size: var(--font-size);
-  font-family: var(--font-text);
-  font-weight: 400;
-  width: 100%;
-  height: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
+  font-family: var(--font-family);
+  width:100%;
+  height:auto;
+  overflow-y:auto;
+  overflow-x: hide;
+  font-weight: 700;
+ 
 }
 
 header {
@@ -81,50 +85,29 @@ header {
   hyphens: none;
 }
 
-/* TEXT STYLES */
-p, h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  word-wrap: break-word;
-  hyphens: auto;
+p, h2, h3, h4, h5, h6 {
+  word-wrap: break-word; /* Ensures long words break properly */
+  hyphens: auto; /* Helps with word splitting for better readability */
 }
 
-h1 {
-  font-size: var(--font-large);
-  text-align: left;
-  margin: 1rem 0;
-  line-height: 1;
+#bg-video-web {
+  display: block;
 }
 
-h2 {
-  font-size: var(--font-medium);
-  margin-top: 3.3em;
+#bg-video-mobile {
+  display: none;
 }
 
-h3 {
-  margin: 3em 0 1em;
-  font-style: italic;
+#bg-video-web, #bg-video-mobile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -100; /* Ensure it stays behind everything */
 }
 
-h4 {
-  margin-top: 2rem;
-}
-
-h5, h6 {
-  margin: 0;
-}
-
-p {
-  line-height: 1.3;
-  font-size: var(--font-size);
-}
-
-#colophon {
-  font-size: var(--font-small);
-  line-height: 1.3;
-  margin: 0;
-}
-
-/* LINKS */
 a {
   color: var(--color-text);
   text-decoration: underline;
@@ -138,13 +121,71 @@ a:hover {
   text-decoration: none;
 }
 
-/* FIGURE & IMAGE STYLES */
+h1, h2, h3, h4, h5, h6, figcaption, a, details {
+  font: var(--font-weight) var(--font-size); 
+
+}
+
+h1{
+  text-align: left;
+  font-size: var(--font-large);
+  line-height: 1;
+  margin: 1rem 0;
+}
+
+h2{
+  font-size: var(--font-medium);
+  margin-top: 3.3em;
+}
+
+h3{
+  margin-top: 3em;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+
+h4 {
+  margin-top: 2rem;
+  
+}
+
+  h5, h6{
+  margin: 0;
+}
+
+p{
+  line-height: 1.3;
+  font-size: var(--font-size);
+}
+
+ol, ul{
+  /* ordered list and unordered list styles */
+}
+
+blockquote{
+  /* blockquote element style */
+}
+
+hr{
+  /* horizontal rule style */
+}
+
+#colophon {
+  font-size: var(--font-small);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+}
+
+
 figure {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   border: var(--color-text) 1px solid;
+  outline-offset: -2px; 
   border-radius: 5px;
   margin: 1em 0;
   background-color: #ffffff;
@@ -153,12 +194,18 @@ figure {
 
 figure img {
   border-radius: 4px 4px 0 0;
-  z-index: -1;
+  z-index: -9999; /* Top-left and top-right rounded */
 }
+
+#img-padding {
+  padding-top: 1em;
+}
+
 
 figcaption p {
   font-size: var(--font-small);
   padding: 0 2rem;
+
 }
 
 .figure-img-wrap {
@@ -166,7 +213,6 @@ figcaption p {
   flex-direction: row;
 }
 
-/* NAVIGATION */
 .nav-container {
   width: 100%;
   position: sticky;
@@ -176,6 +222,7 @@ figcaption p {
   font-size: var(--font-small);
 }
 
+/* Default visible navigation */
 .nav-buttons {
   display: flex;
   flex-direction: row;
@@ -192,55 +239,80 @@ figcaption p {
   cursor: pointer;
   height: 3.5em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-bottom: 5px;
 }
 
-.nav-button:hover,
+.nav-button:hover {
+  background-color: var(--secondary-color);
+}
+
 .nav-button.active {
   background-color: var(--secondary-color);
 }
 
-/* HAMBURGER MENU */
-.hamburger-menu {
+/* Hamburger menu button (hidden by default) */
+.hamburger-menu{
   display: none;
   background-color: white;
-  color: var(--color-text);
+  color: var(--font-text);
   border: var(--color-text) 1px solid;
   border-radius: 100px;
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
   transition: all 0.3s;
+  width: fit-content;
 }
 
+
+/* When hovered */
 .hamburger-menu:hover {
   background-color: var(--color-text);
   color: white;
+  transition: all 0.3s;
 }
 
-/* MOBILE NAVIGATION */
+/* Mobile Styles - Hide buttons, show hamburger */
 @media (max-width: 1430px) {
   .nav-buttons {
     display: none;
+    height: fit-content;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    justify-content: left;
+    gap: 10px;
+    top: 60px; /* Adjust to be below the sticky header */
     transform: translateY(5%);
   }
 
-  .nav-buttons.active {
-    display: flex;
+  .nav-button {
+    flex-direction: row;
+    justify-content: center;
+    height: 3em;
   }
 
+  .nav-button:hover {
+    background-color: var(--secondary-color);
+  }
+
+
+  .nav-buttons.active {
+    display: flex; /* Show menu when active */
+  }
+
+  /* Show the hamburger button */
   .hamburger-menu {
     display: block;
   }
+
+  h2 {
+    margin-top: 3em;
+  }
 }
 
-/* BACK TO TOP BUTTON */
+
 .back-to-top {
   position: fixed;
   bottom: 100px;
@@ -252,95 +324,25 @@ figcaption p {
   padding: 15px;
   font-size: var(--font-size);
   cursor: pointer;
-  display: none;
-  z-index: 9999;
+  display: none; /* Hidden by default */
+  z-index: 99999;
 }
 
+/* Hover effect for the button */
 .back-to-top:hover {
   background-color: var(--secondary-color);
 }
 
-/* PAGE WRAPPER */
-div.page-wrapper {
-  padding: 6.5em var(--margin);
-  z-index: 1;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+details {
+  cursor: pointer;
 }
 
-/* MAIN CONTENT */
-main {
-  margin-top: 7em;
+nav-button:hover {
+  font-style: italic;
+  background-color: var(--color-text);
+  color: white;
+  text-decoration: none;
 }
-
-/* RESPONSIVE MEDIA QUERIES */
-@media (max-width: 1200px) {
-  :root {
-    --margin: 12rem;
-    --font-large: 2.8em;
-  }
-
-  figcaption p {
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 992px) {
-  :root {
-    --margin: 12rem;
-    --font-large: 2.8em;
-  }
-}
-
-@media (max-width: 860px) {
-  :root {
-    --margin: 9rem;
-    --font-large: 2.6em;
-  }
-}
-
-@media (max-width: 779px) and (orientation: landscape) {
-  :root {
-    --margin: 5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --margin: 5rem;
-    --font-large: 2.3em;
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --margin: 2rem;
-    --font-large: 1.9em;
-  }
-
-  main {
-    margin-top: 0;
-  }
-
-  #bg-video-web {
-    display: none;
-  }
-
-  #bg-video-mobile {
-    display: block;
-  }
-  
-}
-
-@media (max-width: 340px) {
-  :root {
-    --margin: 1rem;
-    --font-large: 2em;
-  }
-}
-
 
 
 .littlefoot {
@@ -398,4 +400,152 @@ main {
   color: var(--color-text);
   padding: 1em 3em 4em 1em;
   padding: 1em;
+}
+
+
+/* PAGE STYLES */
+
+/* page structure */
+
+div.page-wrapper {
+  /* the element that 'wraps' everything */
+  padding: 6.5em var(--margin);
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+main{
+  margin-top: 7em;
+}
+
+
+/* UTILITY CLASSES */
+
+/* hide desktop mobile etc */
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+
+
+/* WEBSITE MEDIA QUERIES */
+
+/* responsive typeface for various breaking points, sets the default 'rem' value */
+@media (max-width: 299px) { :root{--font-size: 18px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 299px) and (max-width: 340px) { :root{--font-size: 19px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 340px) and (max-width: 440px) { :root{--font-size: 20px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 441px) and (max-width: 779px) { :root{--font-size: 19px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 780px) and (max-width: 992px) { :root{--font-size: 20px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 993px) and (max-width: 1200px) { :root{--font-size: 21px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 1201px) and (max-width: 1320px) { :root{--font-size: 22px;} html, body {font: var(--font-size) var(--font-text); } }
+@media (min-width: 1321px) { :root{--font-size: 24px;} html, body {font: var(--font-size) var(--font-text); } }
+
+/* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
+/* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
+
+
+  /* utility classes, mobile */
+
+  .desktop-only{
+    display:none;
+  }
+
+  .mobile-only{
+    display:block;
+  }
+
+@media (max-width: 1200px) {
+  :root {
+    --margin: 12rem;
+    --font-large: 2.8em;
+  }
+  figcaption p {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --margin: 12rem;
+    --font-large: 2.8em;
+  }
+  figcaption p {
+    padding: 0 1rem;
+  }
+}
+
+/* Mid-sized tablets (max-width: 860px) */
+@media (max-width: 860px) {
+  :root {
+    --margin: 9rem;
+    --font-large: 2.6em;
+  }
+  figcaption p {
+    padding: 0 1rem;
+  }
+}
+
+/* Small tablets and landscape phones (max-width: 779px) */
+@media (max-width: 779px) and (orientation: landscape) {
+  :root {
+    --margin: 5rem;
+  }
+  figcaption p {
+    padding: 0 1rem;
+  }
+}
+
+/* Large mobile screens (max-width: 600px) */
+@media (max-width: 600px) {
+  :root {
+    --margin: 5rem;
+    --font-large: 2.3em;
+  }
+  figcaption p {
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  :root {
+    --margin: 2rem;
+    --font-large: 1.9em;
+  }
+  #bg-video-web {
+    display: none;
+  }
+  #bg-video-mobile {
+    display: block;
+  }
+  main {
+    margin-top: 0;
+  }
+  figcaption p {
+    padding: 0 1rem;
+  }
+}
+
+/* Very small screens (max-width: 340px) */
+@media (max-width: 340px) {
+  :root {
+    --margin: 1rem;
+    --font-large: 2em;
+  }
+  main {
+    margin-top: 0;
+  }
+  figcaption p {
+    padding: 0 1rem;
+  }
 }
