@@ -96,6 +96,7 @@ p, h2, h3, h4, h5, h6 {
 
 #bg-video-mobile {
   display: none;
+  z-index: -9999;
 }
 
 #bg-video-web, #bg-video-mobile{
@@ -181,6 +182,7 @@ figure {
 
 figure img {
   border-radius: 4px 4px 0 0;
+  z-index: 10;
 }
 
 #img-padding {
@@ -505,7 +507,7 @@ main{
 @media (max-width: 600px) {
   :root {
     --margin: 5rem;
-    --font-large: 2.3em;
+    --font-large: 2.2em;
   }
   body, p, h2, h3, h4, h5, h6 {
     font-weight: 600; /* Apply semi-bold for better readability */
@@ -524,7 +526,7 @@ main{
 @media (max-width: 480px) {
   :root {
     --margin: 2rem;
-    --font-large: 1.9em;
+    --font-large: 1.5em;
   }
   #bg-video-web {
     display: none;
