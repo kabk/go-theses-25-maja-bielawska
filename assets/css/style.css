@@ -369,7 +369,7 @@ nav-button:hover {
   overflow-y: auto; /* Adds scrolling when content exceeds max height */
   min-height: fit-content; /* Allows the popover to shrink if content is small */
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid var(--secondary-color);
   background: var(--secondary-color);
   transition: opacity 0.25s, transform 0.25s;
@@ -507,7 +507,7 @@ main{
 @media (max-width: 600px) {
   :root {
     --margin: 5rem;
-    --font-large: 2.2em;
+    --font-large: 2em;
   }
   body, p, h2, h3, h4, h5, h6 {
     font-weight: 600; /* Apply semi-bold for better readability */
@@ -532,7 +532,7 @@ main{
 @media (max-width: 480px) {
   :root {
     --margin: 2rem;
-    --font-large: 1.5em;
+    --font-large: 1.8em;
   }
   #bg-video-web {
     display: none;
@@ -561,7 +561,7 @@ main{
 @media (max-width: 340px) {
   :root {
     --margin: 1rem;
-    --font-large: 2em;
+    --font-large: 1.8em;
   }
   main {
     margin-top: 0;
