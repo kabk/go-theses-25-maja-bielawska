@@ -168,21 +168,19 @@ p{
 
 
 figure {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   border: var(--color-text) 1px solid;
-  outline-offset: -2px; 
   border-radius: 5px;
-  margin: 1em 0;
+  margin: 3em auto; /* Auto centers the figure */
   background-color: #ffffff;
   text-align: center;
 }
 
 figure img {
   border-radius: 4px 4px 0 0;
-  z-index: -9999; /* Top-left and top-right rounded */
 }
 
 #img-padding {
@@ -199,7 +197,10 @@ figcaption p {
 .figure-img-wrap {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
+
+
 
 .nav-container {
   width: 100%;
@@ -307,7 +308,7 @@ figcaption p {
   right: 30px;
   color: var(--color-text);
   border: solid 1px var(--color-text);
-  border-radius: 10px;
+  border-radius: 50px;
   background-color: white;
   padding: 15px;
   font-size: var(--font-size);
@@ -482,6 +483,9 @@ main{
   figcaption p {
     padding: 0 1rem;
   }
+  figure {
+    width: 100%;
+  }
 }
 
 /* Small tablets and landscape phones (max-width: 779px) */
@@ -491,6 +495,9 @@ main{
   }
   figcaption p {
     padding: 0 1rem;
+  }
+  figure {
+    width: 100%;
   }
 }
 
@@ -505,6 +512,9 @@ main{
   }
   figcaption p {
     padding: 0 1rem;
+  }
+  figure {
+    width: 100%;
   }
 }
 
@@ -528,6 +538,9 @@ main{
   figcaption p {
     padding: 0 1rem;
   }
+  figure {
+    width: 100%;
+  }
 }
 
 /* Very small screens (max-width: 340px) */
@@ -541,5 +554,8 @@ main{
   }
   figcaption p {
     padding: 0 1rem;
+  }
+  figure {
+    width: 100%;
   }
 }
